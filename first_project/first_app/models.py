@@ -20,4 +20,5 @@ class AccessRecord(models.Model):
     date = models.DateField()
 
     def __str__(self):
-        retrun (self.date)
+        return str(self.date)
+    # change get error when display "Access Record Page"  from return self.date to be return str(self.date) Krishna Feb 9'2021 
