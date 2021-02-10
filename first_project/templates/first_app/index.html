@@ -3,13 +3,36 @@
 <html>
   <head>
       <meta charset="UTF-8">
-      <title>Django Guitar Page </title>
-      <link rel="stylesheet" href="{% static "css/mystyle.css"%}"/">
+      <title>Django Level Two</title>
+      <!--  <link rel="stylesheet" href="{% static "css/mystyle.css"%}"/"> -->
+      <link rel="stylesheet" href="{% static "/css/mystyle.css"%}"/">
 
   </head>
   <body>
-    <h1> Hi, this is a picture of Django himself</h1>
-    <img src="{% static "images/Profile.jpg"%}" alt="Uh on, didn't show!">
+    <h1> Hi welcome to Django Level two!</h1>
+    <h2> Here are your access records:</h2>
+      <div class='djangotwo'>
+        {% if access_records %}
+            <table>
+                <thead>
+                  <th>Site Name</th>
+                  <th>Date Accessed</th>
+                </thead>
+
+
+              {% for acc in access_records %}
+              <tr>
+                <td> {{ acc.name }}</td>
+                <td> {{ acc.date }}</td>
+              </tr>
+              {% endfor %}
+           </table>
+        {% else %}
+              <p>NO ACCESS RECORD FOUND!</p>
+        {% endif %}
+      </div>
+
+
   </body>
 
 </html>
