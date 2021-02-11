@@ -23,4 +23,6 @@ urlpatterns = [
     path('help',views.HelpPage,name='HelpPage'),
     path ('AppTwo/',include('AppTwo.urls')),
     path('admin/', admin.site.urls),
+    # เอาไว้เรียกแบบ localhost:8000/users
+    path('users',views.users,name='users')
 ]
