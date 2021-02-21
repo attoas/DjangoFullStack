@@ -20,7 +20,7 @@ from django.conf.urls import include
 
 urlpatterns = [
     path('',views.index,name='index'),
-    path('help',views.HelpPage,name='HelpPage'),
+    #path('help',views.HelpPage,name='HelpPage'),
     path ('AppTwo/',include('AppTwo.urls')),
     path('admin/', admin.site.urls),
     # เอาไว้เรียกแบบ localhost:8000/users
